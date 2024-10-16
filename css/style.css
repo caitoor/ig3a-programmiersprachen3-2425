@@ -1,0 +1,12 @@
+h1 {
+    font-family: "Helvtica", "Arial", sans-serif;
+}
+
+li {
+    background-color: chartreuse;
+
+}
+
+.important {
+    background-color: red;
+}

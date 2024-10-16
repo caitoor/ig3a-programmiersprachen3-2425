@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platypus in the Wilderness</title>
+    <style>
+        /* Wilderness color palette */
+        :root {
+            --background-color: #2c3e50;
+            --accent-color: #1abc9c;
+            --text-color: #ecf0f1;
+            --mobile-background: #34495e;
+            --mobile-accent: #27ae60;
+            --mobile-text: #bdc3c7;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 768px) {
+            body {
+                background-color: var(--mobile-background);
+                color: var(--mobile-text);
+            }
+
+            header {
+                padding: 30px;
+                background-color: var(--mobile-accent);
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Desktop layout */
+        @media (min-width: 769px) {
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .flex-container section {
+                width: 45%;
+            }
+
+            .image {
+                width: 100%;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: var(--accent-color);
+                color: var(--background-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Platypus in the Wilderness</h1>
+    </header>
+
+    <div class="flex-container">
+        <section>
+            <h2>The Unique Platypus</h2>
+            <p>The platypus is one of the most fascinating animals found in the wilderness of Australia. It is a mammal, but it lays eggs and has a duck-like bill, making it one of the most unique creatures on the planet.</p>
+            <p>Its habitat is usually rivers and freshwater areas where it can hunt for food. The platypus has waterproof fur, webbed feet, and can hold its breath underwater for long periods while hunting for prey like insects and small fish.</p>
+        </section>
+
+        <section>
+            <h2>Adaptation to the Wild</h2>
+            <p>The platypus is well adapted to its environment. It is mainly nocturnal and uses its bill to detect electric signals from its prey. Despite its cute appearance, it is equipped with venomous spurs, which makes it a formidable animal in the wild.</p>
+            <p>Platypuses are solitary animals and spend most of their time in the water. They create burrows along riverbanks where they rest and protect themselves from predators.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Platypus.jpg" alt="Platypus" class="image">
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Platypus Wilderness Awareness
+    </footer>
+</body>
+</html>
