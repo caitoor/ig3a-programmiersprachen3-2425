@@ -1,4 +1,5 @@
 <script>
+    import data from "./assets/animaldata.js";
     import Card from "./components/Card.svelte";
 </script>
 
@@ -13,11 +14,9 @@
         </nav>
     </header>
     <main>
-        <Card animalName="Krokodil"/>
-        <Card animalName="Elefant"/>
-        <Card animalName="Giraffe"/>
-        <Card animalName="Nashorn"/>
-        <Card />
+        {#each data as animal}
+            <Card {animal} />
+        {/each}
     </main>
     <footer>
         <p>Made with ❤️ by IG3 – Programmiersprachen 3</p>

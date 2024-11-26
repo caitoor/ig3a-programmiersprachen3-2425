@@ -1,12 +1,14 @@
 <script>
-    export let animalName = "Nilpferd";
+    export let animal;
 </script>
 
 <div class="card-wrapper">
     <div class="card-content">
-        <div class="card-number border-bottom">F2</div>
-        <div class="card-title border-bottom">{animalName}</div>
-        <img class="card-image" src="images/f2.jpg" alt="{animalName}"/>
+        <div class="card-number border-bottom">
+            {animal.group}{animal.group_number}
+        </div>
+        <div class="card-title border-bottom">{animal.name}</div>
+        <img class="card-image" src="images/{animal.group.toLowerCase()}{animal.group_number}.jpg" alt={animal.name} />
         <div class="card-trivia border-bottom">
             Ihre Zähne wachsen ständig nach und werden bis zu 50cm lang.
         </div>
@@ -15,7 +17,7 @@
                 <div class="stat-icon">
                     <img src="images/icons/weight.png" alt="weight" />
                 </div>
-                <div class="stat-content">4500</div>
+                <div class="stat-content">{animal.max_weight}</div>
             </div>
 
             <div class="stat-pair">

@@ -607,4 +607,6 @@ const data = [
     "continents": "Asia, Africa",
     "intelligence": 3
   }
-]
+];
+
+export default data;
