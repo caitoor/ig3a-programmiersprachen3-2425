@@ -1,4 +1,5 @@
 <script>
+    import { mapColor } from "../assets/utils";
     import Hyena from "./Hyena.svelte";
     import Gnu from "./Gnu.svelte";
 
@@ -10,16 +11,6 @@
 
     let hyenaArray = new Array(hyenas);
     let gnuArray = new Array(gnus);
-
-    function mapColor(value, start = [243, 245, 159], end = [54, 99, 12]) {
-        value = value / 100;
-        const r = start[0] + (end[0] - start[0]) * value;
-        const g = start[1] + (end[1] - start[1]) * value;
-        const b = start[2] + (end[2] - start[2]) * value;
-        return `rgb(${r}, ${g}, ${b})`;
-
-        /* rgb(134, 211, 14) */
-    }
 
     const reserveColor = mapColor(plants);
 </script>
@@ -35,11 +26,26 @@
     {#each hyenaArray as _, i}
         <Hyena />
     {/each}
+
+    <div class="counter">{hyenas + gnus}</div>
 </div>
 
 <style>
     .reserve {
         border: 5px solid brown;
         border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .counter {
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: #111;
+        color: white;
+        padding: 3px;
     }
 </style>

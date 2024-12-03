@@ -1,6 +1,11 @@
-<script></script>
+<script>
+    import { getRandomInt } from "../assets/utils";
+</script>
 
-<div class="hyena"></div>
+<div
+    class="hyena"
+    style="top: {getRandomInt(0, 100)}%; left: {getRandomInt(0, 100)}%;"
+></div>
 
 <style>
     .hyena {
@@ -9,5 +14,6 @@
         height: 20px;
         width: 20px;
         border: 1px solid white;
+        position: absolute;
     }
 </style>
