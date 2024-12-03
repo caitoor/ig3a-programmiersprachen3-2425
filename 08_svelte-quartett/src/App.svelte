@@ -1,5 +1,5 @@
 <script>
-    import data from "./assets/animaldata.js";
+    import data from "./assets/animaldata.json";
     import Card from "./components/Card.svelte";
 </script>
 

@@ -4,7 +4,7 @@
 
 <style>
     .hyena {
-        background-color: gray;
+        background-color: beige;
         border-radius: 50%;
         height: 20px;
         width: 20px;

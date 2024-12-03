@@ -1,18 +1,15 @@
 <script>
     import Hyena from "./Hyena.svelte";
+    import Gnu from "./Gnu.svelte";
 
     export let w;
     export let h;
     export let plants;
     export let hyenas = 1;
+    export let gnus = 2;
 
-    /*  function generateHyenasArray(hyenas) {
-        return Array.from({ length: hyenas }, (_, index) => `Hyena ${index + 1}`);
-    } 
-
-    const hyenasArray = generateHyenasArray(hyenas);
-
-    */
+    let hyenaArray = new Array(hyenas);
+    let gnuArray = new Array(gnus);
 
     function mapColor(value, start = [243, 245, 159], end = [54, 99, 12]) {
         value = value / 100;
@@ -31,7 +28,11 @@
     class="reserve"
     style="width: {w}px; height: {h}px; background-color:{reserveColor};"
 >
-    {#each { length: hyenas } as _, i}
+    {#each gnuArray as _, i}
+        <Gnu />
+    {/each}
+
+    {#each hyenaArray as _, i}
         <Hyena />
     {/each}
 </div>
